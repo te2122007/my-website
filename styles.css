@@ -1,0 +1,100 @@
+/* ตั้งค่าพื้นฐานของหน้าเว็บ */
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff5f5;
+    overflow: hidden;
+}
+
+/* กล่องหลัก */
+.container {
+    text-align: center;
+    background-color: #ffebee;
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid #ff6b81;
+    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+    max-width: 600px;
+    width: 90%;
+}
+
+/* สไตล์ของข้อความ */
+.header_text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff6b81;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* กรอบสำหรับรูป */
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ปรับขนาดรูปและเพิ่มแอนิเมชัน */
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* สไตล์ของปุ่ม */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #ff6b81;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 107, 129, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 107, 129, 0.5);
+}
+
+#noButton {
+    background-color: #f44336;
+}
+
+/* แอนิเมชันการปรากฏของข้อความ */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* แอนิเมชันให้รูปเด้งขึ้น */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
